@@ -24,7 +24,7 @@ export function HowItWorks() {
 
         <ol className="mt-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
           {steps.map((step, index) => {
-            const Icon = stepIcons[index % stepIcons.length];
+            const Icon = stepIcons[index % stepIcons.length] ?? PhoneCall;
             return (
               <Reveal key={step.title} delay={index * 100} className="relative">
                 <li className="relative text-center lg:text-left">

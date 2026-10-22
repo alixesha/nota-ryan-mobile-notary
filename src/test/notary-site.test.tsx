@@ -55,7 +55,7 @@ describe("Appointment request form", () => {
       target: { value: "jane@example.com" },
     });
     fireEvent.change(screen.getByLabelText(/requested service/i), {
-      target: { value: services[0].title },
+      target: { value: services[0]!.title },
     });
     fireEvent.change(screen.getByLabelText(/preferred date/i), {
       target: { value: "2026-11-02" },
@@ -76,7 +76,7 @@ describe("Appointment request form", () => {
     expect(screen.getByText("Please choose a preferred time.")).toBeInTheDocument();
   });
 
-  it("shows a clear success message after a valid submission", () => {
+  it("shows a clear success message after a valid submission", async () => {
     render(<AppointmentSection />);
     fillValidForm();
     fireEvent.click(screen.getByRole("button", { name: /send appointment request/i }));
