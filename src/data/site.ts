@@ -1,3 +1,4 @@
+
 /**
  * Single source of truth for all business content.
  *
@@ -21,11 +22,13 @@ export const disclaimer =
 export type NavLink = { label: string; href: string };
 
 export const navLinks: NavLink[] = [
-  { label: "About", href: "#about" },
-  { label: "Services", href: "#services" },
-  { label: "How It Works", href: "#how-it-works" },
-  { label: "FAQ", href: "#faq" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Services", href: "/services" },
+  { label: "How It Works", href: "/how-it-works" },
+  { label: "FAQ", href: "/faq" },
+  { label: "Contact", href: "/contact" },
+  { label: "Appointment", href: "/appointment" },
 ];
 
 export type Service = {
